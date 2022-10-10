@@ -1,0 +1,10 @@
+#!/usr/bin/make -f
+
+SKIP_TESTS = t/200_live.t t/200_live_local_ip.t t/210_live_ssl.t
+TEST_FILES = $(filter-out $(SKIP_TESTS),$(wildcard t/*.t))
+
+%:
+	dh $@
+
+override_dh_auto_test:
+	NO_NETWORK=1 dh_auto_test -- TEST_FILES="$(TEST_FILES)"

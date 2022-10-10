@@ -1,0 +1,20 @@
+Description: run new test which needs internet access only conditionally
+Origin: vendor
+Forwarded: not-needed
+Author: gregor herrmann <gregoa@debian.org>
+Last-Update: 2016-08-29
+
+--- a/t/002_croakage.t
++++ b/t/002_croakage.t
+@@ -44,9 +44,11 @@
+   like ($err, qr/\Q$usage{$method}\E/, join("|",@$c) );
+ }
+ 
++unless ( $ENV{NO_NETWORK} ) {
+ my $res = eval{ $http->get("http://www.example.com/", { headers => { host => "www.example2.com" } } ) };
+ is( $res->{status}, 599, "Providing a Host header errors with 599" );
+ like( $res->{content}, qr/'Host' header/, "Providing a Host header gives right error message" );
++}
+ 
+ done_testing;
+ 
