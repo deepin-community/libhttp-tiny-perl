@@ -1,3 +1,47 @@
+libhttp-tiny-perl (0.082-2) unstable; urgency=medium
+
+  [ Debian Janitor ]
+  * Apply multi-arch hints. + libhttp-tiny-perl: Add Multi-Arch: foreign.
+
+ -- Jelmer Vernooĳ <jelmer@debian.org>  Sat, 15 Oct 2022 17:37:16 +0100
+
+libhttp-tiny-perl (0.082-1) unstable; urgency=medium
+
+  * Import upstream version 0.082.
+  * Update years of packaging copyright.
+  * Update years of upstream copyright.
+  * Declare compliance with Debian Policy 4.6.1.
+  * Drop unneeded version constraints and alternatives from (build)
+    dependencies.
+  * Annotate test-only build dependencies with <!nocheck>.
+
+ -- gregor herrmann <gregoa@debian.org>  Thu, 28 Jul 2022 01:33:12 +0200
+
+libhttp-tiny-perl (0.080-1) unstable; urgency=medium
+
+  * Team upload
+
+  [ gregor herrmann ]
+  * debian/watch: use uscan version 4.
+
+  [ Debian Janitor ]
+  * Bump debhelper from old 10 to 12.
+  * Set debhelper-compat version in Build-Depends.
+  * Set upstream metadata fields: Bug-Submit.
+  * Remove obsolete fields Contact, Name from debian/upstream/metadata
+    (already present in machine-readable debian/copyright).
+  * Update standards version to 4.2.1, no changes needed.
+
+  [ Florian Schlichting ]
+  * Import upstream version 0.080 (closes: #910039)
+  * Refresh tests-internet.patch
+  * Update copyright years
+  * Bump dh compat to level 13
+  * Add Rules-Requires-Root: no
+  * Declare compliance with Debian Policy 4.6.0
+
+ -- Florian Schlichting <fsfs@debian.org>  Sun, 28 Nov 2021 17:23:35 +0800
+
 libhttp-tiny-perl (0.076-1) unstable; urgency=medium
 
   * Import upstream version 0.076.
