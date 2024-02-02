@@ -1,3 +1,23 @@
+libhttp-tiny-perl (0.088-1) unstable; urgency=medium
+
+  * Import upstream version 0.088.
+  * Fixes "current version superseded by Perl 5.38". (Closes: #1060713)
+  * Fixes "CVE-2023-31486: Does not defaults to verify SSL certificates":
+    Since 0.083 the default value for verify_SSL is set to true, i.e. the
+    TLS/SSL certificates on an https connection are validated.
+    (The default can be reverted by setting
+    $ENV{PERL_HTTP_TINY_SSL_INSECURE_BY_DEFAULT} if verify_SSL is not
+    explicitly set.)
+    (Closes: #962407)
+  * Update debian/upstream/metadata.
+  * Update years of upstream and packaging copyright.
+  * Declare compliance with Debian Policy 4.6.2.
+  * Add more test dependencies.
+    They are required for tests which are skipped during build, as they need
+    internet access, but are run during autopkgtests.
+
+ -- gregor herrmann <gregoa@debian.org>  Sat, 13 Jan 2024 20:25:03 +0100
+
 libhttp-tiny-perl (0.082-2) unstable; urgency=medium
 
   [ Debian Janitor ]
