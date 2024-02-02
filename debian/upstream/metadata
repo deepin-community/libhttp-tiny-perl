@@ -1,6 +1,6 @@
 ---
 Archive: CPAN
-Bug-Database: https://github.com/chansen/p5-http-tiny/issues
-Bug-Submit: https://github.com/chansen/p5-http-tiny/issues/new
-Repository: https://github.com/chansen/p5-http-tiny.git
-Repository-Browse: https://github.com/chansen/p5-http-tiny
+Bug-Database: https://github.com/Perl-Toolchain-Gang/HTTP-Tiny/issues
+Bug-Submit: https://github.com/Perl-Toolchain-Gang/HTTP-Tiny/issues/new
+Repository: https://github.com/Perl-Toolchain-Gang/HTTP-Tiny.git
+Repository-Browse: https://github.com/Perl-Toolchain-Gang/HTTP-Tiny

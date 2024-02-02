@@ -7,8 +7,12 @@ Testsuite: autopkgtest-pkg-perl
 Priority: optional
 Build-Depends: debhelper-compat (= 13)
 Build-Depends-Indep: libhttp-cookiejar-perl <!nocheck>,
+                     libio-socket-ip-perl <!nocheck>,
+                     libio-socket-ssl-perl <!nocheck>,
+                     libmozilla-ca-perl <!nocheck>,
+                     libnet-ssleay-perl <!nocheck>,
                      perl
-Standards-Version: 4.6.1
+Standards-Version: 4.6.2
 Vcs-Browser: https://salsa.debian.org/perl-team/modules/packages/libhttp-tiny-perl
 Vcs-Git: https://salsa.debian.org/perl-team/modules/packages/libhttp-tiny-perl.git
 Homepage: https://metacpan.org/release/HTTP-Tiny
@@ -16,6 +20,7 @@ Rules-Requires-Root: no
 
 Package: libhttp-tiny-perl
 Architecture: all
+Multi-Arch: foreign
 Depends: ${misc:Depends},
          ${perl:Depends}
 Recommends: ca-certificates,
@@ -23,7 +28,6 @@ Recommends: ca-certificates,
             libio-socket-ip-perl,
             libio-socket-ssl-perl,
             libnet-ssleay-perl
-Multi-Arch: foreign
 Description: Perl module that implements a small, simple, correct HTTP/1.1 client
  HTTP::Tiny is a very simple HTTP/1.1 client, designed primarily for doing
  simple GET requests without the overhead of a large framework like
